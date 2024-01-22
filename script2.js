@@ -1,4 +1,4 @@
-const correctPasswords = ['nagrada', 'potovanje', 'voda', 'medkulturnost', 'zmagovalci', 'tavcar'];
+const correctPasswords = ['ponedeljek', 'torek', 'sreda', 'cetrtek', 'petek', 'sobota'];
 let currentPasswordIndex = 0;
 
 const logo = document.getElementById('logo');
@@ -44,7 +44,7 @@ if (element) {
                 }
 
         } else {
-            statusMessage.textContent = 'Odlično! Čestitamo, tvoj odgovor je pravilen. Nadaljuj s svojim odličnim delom in uživaj v izzivih, ki te še čakaj.';
+            statusMessage.textContent = 'Odlično! Čestitamo, tvoj odgovor je pravilen. Nadaljuj s svojim odličnim delom in uživaj v izzivih, ki te še čakajo.';
             
         }
     } else {
