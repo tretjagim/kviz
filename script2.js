@@ -1,4 +1,4 @@
-const correctPasswords = ['ponedeljek', 'torek', 'sreda', 'cetrtek', 'petek', 'sobota'];
+const correctPasswords = ['nagrada', 'potovanje', 'voda', 'medkulturnost', 'zmagovalci', 'tavcar'];
 let currentPasswordIndex = 0;
 
 const logo = document.getElementById('logo');
