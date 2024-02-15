@@ -13,35 +13,37 @@ document.getElementById('submit-button').addEventListener('click', function () {
     
     const element = document.getElementById("besedilo");
 
-if (element) {
-    document.getElementById("besedilo").remove();
-} else {
+    if (element) {
+        document.getElementById("besedilo").remove();
+    } else {
 
-}
+    }
     
     if (correctPasswords.includes(userPassword)) {
         logo.src = images[currentPasswordIndex];
         currentPasswordIndex++;
         
+        // Remove the used password from the array
+        correctPasswords.splice(correctPasswords.indexOf(userPassword), 1);
 
-        if (currentPasswordIndex === correctPasswords.length) {
+        if (currentPasswordIndex === images.length) {
             statusMessage.textContent = 'Iskrene čestitke, uspelo ti je doseči cilj. Končno nagrado lahko prevzameš v učilnici Pridem na Tretjo, ki se nahaja v pritličju šole. Hvala za sodelovanje. Ekipa III. gimnazije Maribor';
             passwordInput.disabled = true;
             
             const element2 = document.getElementById("password-input");
 
-                if (element2) {
-                    document.getElementById("password-input").remove();
-                    } else {
+            if (element2) {
+                document.getElementById("password-input").remove();
+            } else {
 
-                }
+            }
             const element3 = document.getElementById("submit-button");
 
-                if (element3) {
-                    document.getElementById("submit-button").remove();
-                    } else {
+            if (element3) {
+                document.getElementById("submit-button").remove();
+            } else {
 
-                }
+            }
 
         } else {
             statusMessage.textContent = 'Odlično! Čestitamo, tvoj odgovor je pravilen. Nadaljuj s svojim odličnim delom in uživaj v izzivih, ki te še čakajo.';
@@ -52,5 +54,4 @@ if (element) {
     }
     passwordInput.value = '';
 });
-
 
